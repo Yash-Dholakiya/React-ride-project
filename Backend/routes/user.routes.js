@@ -5,14 +5,15 @@ const userController = require('../controllers/user.controllers'); // Import use
 
 
 router.post('/register', [  // Validate user input
-    body('fullname.firstname').isLength({ min: 3 }).withMessage('First name should be at least 3 characters long'),
-    body('email').isEmail().withMessage('Please enter a valid email address'),
-    body('password').isLength({ min: 6 }).withMessage('Password should be at least 6 characters long'),
-], userController.registerUser    // Call user controller
+    body('email').isEmail().withMessage('Invalid Email'),
+    body('fullname.firstname').isLength({ min: 5 }).withMessage('First name must be at least 5 characters long'),
+    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long')
+], 
+    userController.registerUser    // Call user controller
     // Handle user registration
-);
+)
 
 
 
 
-modile.exports = router;
+module.exports = router;
