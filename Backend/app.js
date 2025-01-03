@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));    // Parse URL-encoded bodies
 
 
 app.get('/', (req, res) => { 
-    res.send('Hello Yash');
+    res.send('Hello Yash Dholakiya');
 });
 
 app.use('/users', userRoutes);   // Use user routes
