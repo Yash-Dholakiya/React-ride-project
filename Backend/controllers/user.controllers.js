@@ -10,7 +10,6 @@ module.exports.registerUser = async (req, res, next) => {
     }   // Return validation errors
 
 
-    console.log(req.body);
 
     const { fullname, email, password } = req.body;    // Get user input
 
