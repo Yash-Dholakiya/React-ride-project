@@ -19,6 +19,7 @@ router.post('/login', [
 ],
     userController.loginUser    // Call user controller // Handle user login
 )
+router.get('/profile', userController.getUserProfile)    // Call user controller // Handle user profile
 
 
 
